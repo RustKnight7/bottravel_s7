@@ -19,9 +19,11 @@ class S7:
    def poisk(self):
         global ur
         print(self.date1)
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
         # options = webdriver.ChromeOptions()
         # options.add_argument('headless')
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(chrome_options=options)
         driver.implicitly_wait(30)
         base_url = "http://s7.ru/"
         verificationErrors = []
